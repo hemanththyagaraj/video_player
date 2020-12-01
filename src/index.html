@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="video__player-container">
+      <video class="video__player" src="./assets/4k.mp4"></video>
+      <div class="actions">
+        <div class="progress">
+          <div class="progress__bar"></div>
+        </div>
+        <div class="controls">
+          <div class="playback__controls">
+            <span class="fas fa-play" title="Play"></span>
+            <span class="fas fa-undo-alt" title="Rewind 10s"></span>
+            <select name="playback__speed">
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+            <span class="fas fa-redo-alt" title="Forward 10s"></span>
+            <span>
+              <span class="elapsed__time">00:00</span>
+              /
+              <span class="total__duration">00:00</span>
+            </span>
+          </div>
+          <div class="util__controls">
+            <span class="fas fa-volume-up volume"></span>
+            <span class="fas fa-expand"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

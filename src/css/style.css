@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.video__player-container {
+  width: 70vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video__player {
+  width: 100%;
+  height: auto;
+}
+
+.progress {
+  height: 10px;
+  background-color: rgb(138, 138, 138);
+  width: 100%;
+}
+
+.progress__bar {
+  width: 0%;
+  height: 100%;
+  background-color: red;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.playback__controls  > span {
+    margin: 0px 10px;
+}
+
+.util__controls  > span {
+  margin: 0px 10px;
+}
+
+.actions {
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.507);
+  bottom: 5px;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video__player-container .actions {
+  visibility: hidden;
+}
+
+.video__player-container:hover .actions {
+  visibility: visible;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+[name="playback__speed"] {
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+
+.video__player::-webkit-media-controls {
+  display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .video__player-container {
+    width: 95vw;
+  }
+
+  .actions {
+    height: 20%;
+  }
+}
